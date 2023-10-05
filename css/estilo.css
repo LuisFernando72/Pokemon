@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* background-image: linear-gradient(to top, #152d4d 0%, #3c596f 100%); */
+}
+
+.caja_padre {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 30px 30px 50px;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+.contenedor * {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+h2 {
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.skills:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.detalle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu {
+    position: relative;
+    background: rgb(192, 191, 191);
+    border-radius: 20px;
+}
+
+.menu div {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+
+}
+
+/* ANIMACION */
+
+#html-menu {
+    animation: html-barra 3s forwards;
+    background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+}
+
+@keyframes html-barra {
+    100% {
+        width: 80%;
+    }
+}
+
+#css-menu {
+    animation: css-barra 3s forwards;
+
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+@keyframes css-barra {
+    100% {
+        width: 80%;
+    }
+}
+
+#js-menu {
+    animation: js-barra 3s forwards;
+    background-image: linear-gradient(120deg, #a2f869 0%, #7cfd8e 100%);
+}
+
+@keyframes js-barra {
+    100% {
+        width: 90%;
+    }
+}
+
+#boos-menu {
+    animation: boos-barra 3s forwards;
+
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+
+@keyframes boos-barra {
+    100% {
+        width: 70%;
+    }
+}
+
+
+ 
+
+.tabla::after,
+.tabla::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    background: linear-gradient(120deg, #79fb00, #66a001, #06a503, #ff9500,
+            #f7f6f6, #3ffb00, #ff6600, #04c2e4, #ffff00, #00ff88, #00ac06, #00ac67);
+    background-size: 300%;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    z-index: -1;
+    animation: BGgradient 15s ease infinite;
+    border-radius: 10px;
+}
+
+
+
+@keyframes BGgradient {
+    0% {
+        background-position: 0% 200%;
+    }
+
+    50% {
+        background-position: 200% 0%;
+    }
+
+    100% {
+        background-position: 0% 330%;
+    }
+}
+
+img{
+    cursor: pointer;
+}
+
+
+.tabla:after {
+    filter: brightness(1.4);
+    filter: drop-shadow(16px 16px 20px rgb(255, 213, 24));
+    filter: blur(10px);
+}
+
+.skills:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
